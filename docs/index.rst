@@ -184,6 +184,7 @@ The following modules have been completed using a common API:
   gaia/gaia.rst
   gama/gama.rst
   heasarc/heasarc.rst
+  hitran/hitran.rst
   ibe/ibe.rst
   irsa/irsa.rst
   irsa/irsa_dust.rst
@@ -202,7 +203,9 @@ The following modules have been completed using a common API:
   vamdc/vamdc.rst
   vizier/vizier.rst
   vo_conesearch/vo_conesearch.rst
+  vsa/vsa.rst
   xmatch/xmatch.rst
+
 
 These others are functional, but do not follow a common & consistent API:
 
@@ -213,7 +216,6 @@ These others are functional, but do not follow a common & consistent API:
   cosmosim/cosmosim.rst
   exoplanet_orbit_database/exoplanet_orbit_database.rst
   fermi/fermi.rst
-  hitran/hitran.rst
   jplhorizons/jplhorizons.rst
   lamda/lamda.rst
   nasa_exoplanet_archive/nasa_exoplanet_archive.rst
@@ -222,6 +224,13 @@ These others are functional, but do not follow a common & consistent API:
   open_exoplanet_catalogue/open_exoplanet_catalogue.rst
   sdss/sdss.rst
   sha/sha.rst
+
+There are also subpackages that serve as the basis of others.
+
+.. toctree::
+  :maxdepth: 1
+
+  wfau/wfau.rst
 
 Catalog, Archive, and Other
 ===========================
@@ -252,6 +261,7 @@ for each source)
   sha/sha.rst
   simbad/simbad.rst
   ukidss/ukidss.rst
+  vsa/vsa.rst
   vizier/vizier.rst
   xmatch/xmatch.rst
   vo_conesearch/vo_conesearch.rst
@@ -283,6 +293,7 @@ generally return a table listing the available data first.
   sdss/sdss.rst
   sha/sha.rst
   ukidss/ukidss.rst
+  vsa/vsa.rst
   skyview/skyview.rst
 
 Simulations

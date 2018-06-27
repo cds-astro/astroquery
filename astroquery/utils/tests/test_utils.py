@@ -36,10 +36,11 @@ class SimpleQueryClass(object):
 
 
 @remote_data
-def test_utils():
-    response = urllib.request.urlopen('http://www.ebay.com')
+def test_chunk_read():
+    datasize = 50000
+    response = urllib.request.urlopen('http://httpbin.org/stream-bytes/{0}'.format(datasize))
     C = chunk_read(response, report_hook=chunk_report)
-    print(C)
+    assert len(C) == datasize
 
 
 def test_class_or_instance():
@@ -306,7 +307,7 @@ docstr3_out = """
 
 def test_return_chomper(doc=docstr3, out=docstr3_out):
     assert (remove_sections(doc, sections=['Returns', 'Parameters']) ==
-                [x.lstrip() for x in out.split('\n')])
+            [x.lstrip() for x in out.split('\n')])
 
 
 def dummyfunc1():

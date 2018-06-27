@@ -15,6 +15,10 @@ instrument_list = [u'fors1', u'fors2', u'sphere', u'vimos', u'omegacam',
                    u'kmos', u'sinfoni', u'amber', u'midi', u'pionier',
                    u'gravity']
 
+# Some tests take too long, leading to travis timeouts
+# TODO: make this a configuration item
+SKIP_SLOW = True
+
 
 @remote_data
 class TestEso:
@@ -58,7 +62,9 @@ class TestEso:
 
         eso = Eso()
         eso.cache_location = temp_dir
-        eso.ROW_LIMIT = 200  # first b333 is at 157
+        eso.ROW_LIMIT = 1000
+        # first b333 was at 157
+        # first pistol....?
 
         result_s = eso.query_surveys(['VVV', 'XSHOOTER'],
                                      coord1=266.41681662,
@@ -167,6 +173,7 @@ class TestEso:
                                          box='01 00 00',
                                          cache=False)
 
+    @pytest.mark.skipif("SKIP_SLOW")
     @pytest.mark.parametrize('cache', (False, True))
     def test_each_survey_nosource(self, temp_dir, cache):
         eso = Eso()

@@ -1,21 +1,43 @@
-0.3.8 (unreleased)
+0.3.9 (unreleased)
 ------------------
 
-- TAP: Add tool to check for phase of background job [#1073]
-- splatalogue: Move to https.  Old HTTP post requests were broken [#1066,#1076]
-- heasarc: Add additional functionality and expand query capabilities [#1047]
-- New tool: JPL Horizons service to obtain ephemerides, orbital elements, and
-  state vectors for Solar System objects. [#1023]
-- New tool: MPC to query the Minor Planet Center web service [#1064]
-- ATOMIC: Fixed remote tests that were broken. [#1038]
-- vo_conesearch: URL for validated services have changed. Old URL should still
-  redirect but it is deprecated. [#1033]
-- MAST: bugfix, removing filesize checking due to unreliable filesize reporting in the database [#1050]
-- MAST: Added Catalogs class. [#1049]
-- New tool: Open Astronomy Catalog API to obtain data products on supernovae, TDEs, and kilonovae. [#1053]
-- MPC: Added module to query the Minor Planet Center web service [#1064]
-- IRSA Dust: call over https. [#1069]
+- ESASKY: get_maps() accepts dict or list of (name, Table) pairs as input
+  table list. [#1167]
+- HITRAN: use class-based API [#824]
+- JPL Horizons: Fix for missing total absolute magnitude or phase coefficient for comets [#1151]
+- MAST: Enable converting list of products into S3 uris [#1126]
+- NASA_ADS: Use new API [#1162]
+- VO_CONESEARCH: Service validator now uses new STScI VAO TAP registry. [#1114]
 
+
+0.3.8 (2018-04-27)
+------------------
+
+- New tool ``jplhorizons``: JPL Horizons service to obtain ephemerides,
+  orbital elements, and state vectors for Solar System objects. [#1023]
+- New tool ``mpc``: MPC Module to query the Minor Planet Center web service.
+  [#1064, #1077]
+- New tool ``oac``: Open Astronomy Catalog API to obtain data products on
+  supernovae, TDEs, and kilonovae. [#1053]
+- New tool ``wfau`` and ``vsa``: Refactor of the UKIDSS query tool add full
+  WFAU support.  [#984]
+- ALMA: Adding support for band and polarization selection. [#1108]
+- HEASARC: Add additional functionality and expand query capabilities. [#1047]
+- GAIA: Default URL switched to DR2 and made configurable. [#1112]
+- IRSA: Raise exceptions for exceeding output table size limit. [#1032]
+- IRSA_DUST: Call over https. [#1069]
+- LAMDA: Fix writer for Windows on Python 3. [#1059]
+- MAST: Removing filesize checking due to unreliable filesize reporting in
+  the database. [#1050]
+- MAST: Added Catalogs class. [#1049]
+- MAST: Enable downloading MAST HST data from S3. [#1040]
+- SPLATALOGUE: Move to https as old HTTP post requests were broken. [#1076]
+- UKIDSS: Update to DR10 as default database. [#984]
+- utils.TAP: Add tool to check for phase of background job. [#1073]
+- utils.TAP: Added redirect handling to sync jobs. [#1099]
+- utils.TAP: Fix jobsIDs assignment. [#1105]
+- VO_CONESEARCH: URL for validated services have changed. Old URL should still
+  redirect but it is deprecated. [#1033]
 
 0.3.7 (2018-01-25)
 ------------------
