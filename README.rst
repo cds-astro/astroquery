@@ -159,6 +159,9 @@ Badges
 
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1160627.svg
    :target: https://doi.org/10.5281/zenodo.1160627
+   
+.. image:: https://mybinder.org/badge.svg
+   :target: https://mybinder.org/v2/gh/cds-astro/astroquery/notebook_use_case
 
 
 .. .. image:: https://d2weczhvl823v0.cloudfront.net/astropy/astroquery/trend.png
