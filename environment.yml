@@ -1,9 +1,0 @@
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - matplotlib
-  - astropy-healpix
-  - pip:
-    - mocpy
-    - pyvo
