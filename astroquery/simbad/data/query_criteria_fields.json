@@ -135,6 +135,11 @@
     "description": "Catalogue of equivalent width of Hgamma line from Petrie et al. (1973PDAO...14..151P)",
     "type": "historical measurement"
   },
+  "id": {
+    "description": "All the identifiers of an object, concatenated in a single string",
+    "type": "alias table",
+    "tap_table": "ids"
+  },
   "id(1)": {
     "description": "1 : display the first (main identifier) of the object. Is the same as main_id.",
     "type": "alias",
